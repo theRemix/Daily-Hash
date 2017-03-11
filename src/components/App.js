@@ -18,16 +18,23 @@ export default class App extends Component{
 
   render() {
     return (
-      <div>
-        <h1>Generate Hash</h1>
+      <div class="container">
+        <div class="columns">
+          <div class="column col-4"></div>
+          <div class="column col-4">
+            <h1>Generate Hash</h1>
 
-        <form onSubmit={this.updateHash.bind(this)} >
-          <input id="message" name="message" placeholder="Type thing to hash" type="password" />
-          <button type="submit">Generate</button>
-        </form>
+            <form onSubmit={this.updateHash.bind(this)} >
+              <input id="message" name="message" class="form-input" placeholder="Type thing to hash" type="password" />
 
-        <div class="hash-container">
-          <h2>{ this.state.hash }</h2>
+              <div class="form-group empty-action">
+                <button class="btn btn-primary" type="submit">Generate</button>
+              </div>
+            </form>
+
+            <h6 class="empty-title hash-container">{ this.state.hash }</h6>
+          </div>
+          <div class="column col-4"></div>
         </div>
       </div>
     );
